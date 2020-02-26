@@ -7,7 +7,7 @@ dev_human_url = 'https://www.brainspan.org/api/v2/well_known_file_download/26766
 adult_human_url = ''
 
 req = requests.get(dev_human_url, stream=True, verify=False)
-handle = open('dev_human.zip', 'wb')
+handle = open('./data/dev_human.zip', 'wb')
 
 for chunk in req.iter_content(chunk_size=512):
     if chunk:
