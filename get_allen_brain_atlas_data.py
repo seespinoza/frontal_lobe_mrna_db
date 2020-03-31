@@ -46,7 +46,7 @@ for structure in brain_structures:
 
 structure_id_str = ','.join(structure_ids)
 
-#Retreive all post-natal donors for developing brains
+#Retrieve all post-natal donors for developing brains
 
 dev_brain_donors = rma.model_query('Donor',
                                    include="age[embryonic$eqfalse]",
@@ -62,7 +62,7 @@ dev_gid_outfile = Path('./data/dev_gene_ids.txt')
 # Check if output file is already there
 if not dev_gid_outfile.is_file():
 
-# Retreive all developing human brain gene ids 
+# Retrieve all developing human brain gene ids 
     with open('./data/dev_genes.txt', 'r') as f, open('./data/dev_gene_ids.txt','w') as o:
         for gene in f:
             g = gene.strip('\n')
