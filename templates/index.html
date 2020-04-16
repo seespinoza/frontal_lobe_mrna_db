@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block conte9nt %}
+<h1>Test</h1>
+{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body>
+    <h1> Home page !</h1>
+    <p>{{content}}</p>
+    {% for _ in range(10): %}
+        <p>Hello</p>
+    {% endfor %}
+</body>
+</html>
