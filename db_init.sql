@@ -28,5 +28,10 @@ CREATE TABLE go_terms (
     term                 varchar      --Name of GO term
 );
 
-/* Copy data. */
 
+/* Copy data. */
+\copy expression_values FROM './data/expression_values.tsv' WITH NULL AS '-'
+\copy maps_to FROM './data/maps_to' WITH NULL AS '-'
+\copy differentially_expressed_genes FROM './data/differentially_expressed_genes.tsv' WITH NULL AS '-'
+\copy associated FROM './data/associated.tsv' WITH NULL AS '-'
+\copy go_terms FROM './data/go_terms.tsv' WITH NULL AS '-'
