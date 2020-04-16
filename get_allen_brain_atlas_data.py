@@ -109,8 +109,7 @@ for donor in dev_brain_donor_ids:
 
                 exp_values = soup.find_all('expression-level')
                 print(exp_values)
-                print(query.format(dev_gene_ids[gene], donor, structure_id_str))
-                #print(exp_values)
+                print(query.format(dev_gene_ids[gene], donor, structure_id_str)) 
                 exp_values = exp_values[0].find_all('expression-level')
 
                 id_counter = 0
