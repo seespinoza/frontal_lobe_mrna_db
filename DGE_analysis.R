@@ -32,6 +32,10 @@ contr <- makeContrasts(coldatadev - coldataadult, levels = colnames(coef(fit)))
 
 tmp <- contrasts.fit(fit, contr)
 
-tmp <- eBayes(tmp)
+tmp <- treat(tmp)
+
+results <- topTable(tmp, sort.by = "P", n=Inf)
 
 
+# Write out most differentially expressed genes
+write.table(row.names(top.table), file='DEG.txt', row.names = F, quote=F)
